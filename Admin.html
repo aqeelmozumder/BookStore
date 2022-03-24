@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bookstore Admin View</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="Aqeel Mozumder">
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <style>
+          body {
+            background-color: lightblue;
+          }
+          
+          h1{
+            color: rgb(34, 21, 216);
+            text-align: center;
+          }
+          #navbar a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding-right:15px;
+          }
+         
+          .tab{
+            background-color: rgb(192, 187, 186);
+          }
+      
+          .active{
+            color: rgb(216, 50, 21);
+          }
+        </style>
+      </head>
+   
+      <body>
+      
+        <div class="header">
+          <h1>Bookstore Admin View</h1>
+        </div>
+
+        <nav id="nav">
+          <div class="Menu">
+              <ul class="tab">
+                <li><a href="/">Order Book Here</a></li>
+                <li class="active"><a href="/Admin">Admin</a></li>
+              </ul>
+          </div>
+        </nav>
+
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">TimeStamp</th>
+              </tr>
+            </thead>
+            <tbody>
+                {{for orders}}
+                    <tr>
+                        <th>{{:name}}</th>
+                        <th>{{:book}}</th>
+                        <th>{{:date}}</th>
+                    </tr>
+                {{/for}}
+            </tbody>
+          </table>
+
+    </body>
+</html>

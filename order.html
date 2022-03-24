@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BookStore Web Application</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="Aqeel Mozumder">
+        <style>
+            body {
+              background-color: lightblue;
+            }
+            
+            h1{
+              color: rgb(34, 21, 216);
+              text-align: center;
+            }
+            #navbar a{
+              color: #fff;
+              text-decoration: none;
+              font-size: 18px;
+              padding-right:15px;
+            }
+           
+            .tab{
+              background-color: rgb(192, 187, 186);
+            }
+        
+            .active{
+              color: rgb(216, 50, 21);
+            }
+            
+        </style>
+    </head>
+    <body>
+      <div class="header">
+        <h1>Welcome to Aqeel's BookStore</h1>
+      </div>
+        <nav id="nav">
+            <div class="Menu">
+                <ul class="tab">
+                <li class="active"><a href="/">Order Book Here</a></li>
+                <li><a href="/Admin">Admins Only</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <form action="/order/cached" method="GET">
+            <div class="form-group">
+              <label for="name">User Name:</label>
+              <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="book">Book:</label>
+              <input type="text" class="form-control" id="book" name="book">
+            </div>
+
+            <button type="submit" class="btnS">Submit</button>
+        </form>
+
+    </body>
+</html>
